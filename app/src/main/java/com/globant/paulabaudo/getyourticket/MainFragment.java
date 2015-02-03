@@ -18,7 +18,7 @@ import android.widget.Toast;
 public class MainFragment extends Fragment {
 
     ListView mListViewMovies;
-    final String[] mMovies = new String[] { "The Pirates of the Caribbean",
+    final String[] mMovies = new String[] { "Pirates of the Caribbean",
             "The Hobbit",
             "Eragon",
             "The Avengers",
@@ -52,7 +52,14 @@ public class MainFragment extends Fragment {
         mListViewMovies.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(view.getContext(),mMovies[position],Toast.LENGTH_SHORT).show();
+                switch (position){
+                    case 0:
+                        getFragmentManager().beginTransaction().replace(R.id.container, new ).commit();
+                        break;
+                    default:
+                        Toast.makeText(view.getContext(),mMovies[position],Toast.LENGTH_SHORT).show();
+                        break;
+                }
             }
         });
     }
