@@ -18,16 +18,16 @@ import android.widget.Toast;
 public class MainFragment extends Fragment {
 
     ListView mListViewMovies;
-    final String[] mMovies = new String[] { "Pirates of the Caribbean",
-            "The Hobbit",
-            "Eragon",
-            "The Avengers",
-            "Thor",
-            "Iron Man 2",
-            "Transformers",
-            "Inception",
-            "Prince of Persia",
-            "Avatar"
+    final String[] mMovies = new String[] { Constants.MOVIE_PIRATES,
+            Constants.MOVIE_HOBBIT  ,
+            Constants.MOVIE_ERAGON,
+            Constants.MOVIE_AVENGERS,
+            Constants.MOVIE_THOR,
+            Constants.MOVIE_IRON,
+            Constants.MOVIE_TRANSFORMERS,
+            Constants.MOVIE_INCEPTION,
+            Constants.MOVIE_PRINCE,
+            Constants.MOVIE_AVATAR
     };
 
     public MainFragment() {
@@ -52,12 +52,36 @@ public class MainFragment extends Fragment {
         mListViewMovies.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                switch (position){
-                    case 0:
+                switch (mMovies[position]){
+                    case Constants.MOVIE_PIRATES:
                         getFragmentManager().beginTransaction().replace(R.id.container, new PiratesFragment()).commit();
                         break;
-                    default:
-                        Toast.makeText(view.getContext(),mMovies[position],Toast.LENGTH_SHORT).show();
+                    case Constants.MOVIE_HOBBIT:
+                        getFragmentManager().beginTransaction().replace(R.id.container, new HobbitFragment()).commit();
+                        break;
+                    case Constants.MOVIE_AVATAR:
+                        getFragmentManager().beginTransaction().replace(R.id.container, new AvatarFragment()).commit();
+                        break;
+                    case Constants.MOVIE_AVENGERS:
+                        getFragmentManager().beginTransaction().replace(R.id.container, new AvengersFragment()).commit();
+                        break;
+                    case Constants.MOVIE_ERAGON:
+                        getFragmentManager().beginTransaction().replace(R.id.container, new EragonFragment()).commit();
+                        break;
+                    case Constants.MOVIE_INCEPTION:
+                        getFragmentManager().beginTransaction().replace(R.id.container, new InceptionFragment()).commit();
+                        break;
+                    case Constants.MOVIE_IRON:
+                        getFragmentManager().beginTransaction().replace(R.id.container, new IronFragment()).commit();
+                        break;
+                    case Constants.MOVIE_PRINCE:
+                        getFragmentManager().beginTransaction().replace(R.id.container, new PrinceFragment()).commit();
+                        break;
+                    case Constants.MOVIE_THOR:
+                        getFragmentManager().beginTransaction().replace(R.id.container, new ThorFragment()).commit();
+                        break;
+                    case Constants.MOVIE_TRANSFORMERS:
+                        getFragmentManager().beginTransaction().replace(R.id.container, new TransformersFragment()).commit();
                         break;
                 }
             }
