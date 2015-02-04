@@ -2,7 +2,7 @@ package com.globant.paulabaudo.getyourticket;
 
 
 import android.os.Bundle;
-import android.app.Fragment;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -54,34 +54,44 @@ public class MainFragment extends Fragment {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 switch (mMovies[position]){
                     case Constants.MOVIE_PIRATES:
-                        getFragmentManager().beginTransaction().replace(R.id.container, new PiratesFragment()).commit();
+                        getFragmentManager().beginTransaction().replace(R.id.container, new PiratesFragment()).
+                                addToBackStack(null).commit();
                         break;
                     case Constants.MOVIE_HOBBIT:
-                        getFragmentManager().beginTransaction().replace(R.id.container, new HobbitFragment()).commit();
+                        getFragmentManager().beginTransaction().replace(R.id.container, new HobbitFragment()).
+                                addToBackStack(null).commit();
                         break;
                     case Constants.MOVIE_AVATAR:
-                        getFragmentManager().beginTransaction().replace(R.id.container, new AvatarFragment()).commit();
+                        getFragmentManager().beginTransaction().replace(R.id.container, new AvatarFragment()).
+                                addToBackStack(null).commit();
                         break;
                     case Constants.MOVIE_AVENGERS:
-                        getFragmentManager().beginTransaction().replace(R.id.container, new AvengersFragment()).commit();
+                        getFragmentManager().beginTransaction().replace(R.id.container, new AvengersFragment()).
+                                addToBackStack(null).commit();
                         break;
                     case Constants.MOVIE_ERAGON:
-                        getFragmentManager().beginTransaction().replace(R.id.container, new EragonFragment()).commit();
+                        getFragmentManager().beginTransaction().replace(R.id.container, new EragonFragment()).
+                                addToBackStack(null).commit();
                         break;
                     case Constants.MOVIE_INCEPTION:
-                        getFragmentManager().beginTransaction().replace(R.id.container, new InceptionFragment()).commit();
+                        getFragmentManager().beginTransaction().replace(R.id.container, new InceptionFragment()).
+                                addToBackStack(null).commit();
                         break;
                     case Constants.MOVIE_IRON:
-                        getFragmentManager().beginTransaction().replace(R.id.container, new IronFragment()).commit();
+                        getFragmentManager().beginTransaction().replace(R.id.container, new IronFragment()).
+                                addToBackStack(null).commit();
                         break;
                     case Constants.MOVIE_PRINCE:
-                        getFragmentManager().beginTransaction().replace(R.id.container, new PrinceFragment()).commit();
+                        getFragmentManager().beginTransaction().replace(R.id.container, new PrinceFragment()).
+                                addToBackStack(null).commit();
                         break;
                     case Constants.MOVIE_THOR:
-                        getFragmentManager().beginTransaction().replace(R.id.container, new ThorFragment()).commit();
+                        getFragmentManager().beginTransaction().replace(R.id.container, new ThorFragment()).
+                                addToBackStack(null).commit();
                         break;
                     case Constants.MOVIE_TRANSFORMERS:
-                        getFragmentManager().beginTransaction().replace(R.id.container, new TransformersFragment()).commit();
+                        getFragmentManager().beginTransaction().replace(R.id.container, new TransformersFragment()).
+                                addToBackStack(null).commit();
                         break;
                 }
             }
