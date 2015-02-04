@@ -54,7 +54,7 @@ public class MainFragment extends Fragment {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 switch (position){
                     case 0:
-                        getFragmentManager().beginTransaction().replace(R.id.container, new ).commit();
+                        getFragmentManager().beginTransaction().replace(R.id.container, new PiratesFragment()).commit();
                         break;
                     default:
                         Toast.makeText(view.getContext(),mMovies[position],Toast.LENGTH_SHORT).show();
