@@ -8,5 +8,16 @@
     <string name="text_get_your_ticket">Get Your Ticket!</string>
     <string name="text_choose_movie">Choose a movie from the list below...</string>
     <string name="text_view_pirates_description_text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which dont look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isnt anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</string>
+    <string name="text_view_movie_name_text">Movie:</string>
+    <string name="text_view_movie_text">Movie:</string>
+    <string name="text_view_date_text">Date:</string>
+    <string name="button_date_picker">...</string>
+    <string name="date_picker_example">MM/DD/YYYY</string>
+    <string name="text_view_time_text">Time:</string>
+    <string name="text_view_name_text">Name:</string>
+    <string name="edit_text_phone_text">Phone:</string>
+    <string name="text_view_email_text">E-mail:</string>
+    <string name="text_view_count_text">Quantity:</string>
+    <string name="button_book_text">Book the tickets!</string>
 
 </resources>

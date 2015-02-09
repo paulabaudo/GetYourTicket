@@ -6,6 +6,7 @@ package com.globant.paulabaudo.getyourticket;
 public class Constants {
 
     // Movies
+    public final static String MOVIE = "Movie";
     public final static String MOVIE_PIRATES = "Pirates of the Caribbean";
     public final static String MOVIE_HOBBIT = "The Hobbit";
     public final static String MOVIE_ERAGON = "Eragon";
