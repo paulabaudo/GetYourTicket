@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/pref_default_values">
+        <EditTextPreference android:key="username_preference"
+            android:title="@string/pref_username_title" android:summary="@string/pref_username_summary"/>
+        <EditTextPreference android:key="email_preference"
+            android:inputType="textEmailAddress"
+            android:title="@string/pref_email_title" android:summary="@string/pref_email_summary"/>
+        <EditTextPreference android:key="phone_preference"
+            android:title="@string/pref_phone_title" android:summary="@string/pref_phone_summary"/>
+    </PreferenceCategory>
+</PreferenceScreen>

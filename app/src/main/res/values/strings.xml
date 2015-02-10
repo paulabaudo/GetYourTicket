@@ -19,5 +19,13 @@
     <string name="text_view_email_text">E-mail:</string>
     <string name="text_view_count_text">Quantity:</string>
     <string name="button_book_text">Book the tickets!</string>
+    <string name="pref_default_values">Default values</string>
+    <string name="pref_username_title">Default name</string>
+    <string name="pref_username_summary">Enter the default name</string>
+    <string name="pref_email_title">Default email</string>
+    <string name="pref_email_summary">Enter a default email</string>
+    <string name="pref_phone_title">Default phone number</string>
+    <string name="pref_phone_summary">Enter a default phone number</string>
+    <string name="title_activity_settings">Settings</string>
 
 </resources>
