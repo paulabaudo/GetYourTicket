@@ -34,7 +34,7 @@ public class FormFragment extends Fragment implements AdapterView.OnItemSelected
     EditText mEditTextQuantity;
     Button mButtonBookTikets;
     Spinner mSpinnerTime;
-    Boolean[] mStates = { false, true, false, false, false, false };
+    Boolean[] mStates = { false, false, false, false, false };
     String mStringTimeSelected;
     Button mButtonDatePicker;
     TextView mTextViewDate;
@@ -92,10 +92,10 @@ public class FormFragment extends Fragment implements AdapterView.OnItemSelected
 
     private void wireUpViews(View rootView) {
         mTextViewDate = (TextView) rootView.findViewById(R.id.text_view_date_selected); // mStates[0]
-        mEditTextQuantity = (EditText) rootView.findViewById(R.id.edit_text_quantity); // mStates[2]
-        mEditTextName = (EditText) rootView.findViewById(R.id.edit_text_name); // mStates[3]
-        mEditTextPhone = (EditText) rootView.findViewById(R.id.edit_text_phone); // mStates[4]
-        mEditTextEmail = (EditText) rootView.findViewById(R.id.edit_text_email); // mStates[5]
+        mEditTextQuantity = (EditText) rootView.findViewById(R.id.edit_text_quantity); // mStates[1]
+        mEditTextName = (EditText) rootView.findViewById(R.id.edit_text_name); // mStates[2]
+        mEditTextPhone = (EditText) rootView.findViewById(R.id.edit_text_phone); // mStates[3]
+        mEditTextEmail = (EditText) rootView.findViewById(R.id.edit_text_email); // mStates[4]
         mButtonBookTikets = (Button) rootView.findViewById(R.id.button_book);
         mSpinnerTime = (Spinner) rootView.findViewById(R.id.spinner);
         mButtonDatePicker = (Button) rootView.findViewById(R.id.button_date_picker);
@@ -113,7 +113,7 @@ public class FormFragment extends Fragment implements AdapterView.OnItemSelected
 
             @Override
             public void afterTextChanged(Editable s) {
-                mStates[3] = (!TextUtils.isEmpty(s.toString()));
+                mStates[2] = (!TextUtils.isEmpty(s.toString()));
                 mButtonBookTikets.setEnabled(formIsComplete());
             }
         });
@@ -128,7 +128,7 @@ public class FormFragment extends Fragment implements AdapterView.OnItemSelected
 
             @Override
             public void afterTextChanged(Editable s) {
-                mStates[4] = (!TextUtils.isEmpty(s.toString()));
+                mStates[3] = (!TextUtils.isEmpty(s.toString()));
                 mButtonBookTikets.setEnabled(formIsComplete());
             }
         });
@@ -143,7 +143,7 @@ public class FormFragment extends Fragment implements AdapterView.OnItemSelected
 
             @Override
             public void afterTextChanged(Editable s) {
-                mStates[5] = (!TextUtils.isEmpty(s.toString()));
+                mStates[4] = (!TextUtils.isEmpty(s.toString()));
                 mButtonBookTikets.setEnabled(formIsComplete());
             }
         });
@@ -158,7 +158,7 @@ public class FormFragment extends Fragment implements AdapterView.OnItemSelected
 
             @Override
             public void afterTextChanged(Editable s) {
-                mStates[2] = (!TextUtils.isEmpty(s.toString()));
+                mStates[1] = (!TextUtils.isEmpty(s.toString()));
                 mButtonBookTikets.setEnabled(formIsComplete());
             }
         });

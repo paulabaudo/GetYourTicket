@@ -29,5 +29,6 @@
     <string name="title_activity_settings">Settings</string>
     <string name="title_activity_select_date">Select Date</string>
     <string name="button_select_done">Done</string>
+    <string name="text_view_success">Your tickets have been successfuly booked!</string>
 
 </resources>
