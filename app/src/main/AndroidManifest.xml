@@ -20,6 +20,10 @@
             android:name=".SettingsActivity"
             android:label="@string/title_activity_settings" >
         </activity>
+        <activity
+            android:name=".SelectDateActivity"
+            android:label="@string/title_activity_select_date" >
+        </activity>
     </application>
 
 </manifest>

@@ -1,6 +1,8 @@
 package com.globant.paulabaudo.getyourticket;
 
 
+import android.app.Activity;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -17,7 +19,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 
 
 /**
@@ -25,6 +26,7 @@ import android.widget.Toast;
  */
 public class FormFragment extends Fragment implements AdapterView.OnItemSelectedListener {
 
+    final static Integer REQUEST_CODE = 0;
     TextView mTextViewMovie;
     EditText mEditTextName;
     EditText mEditTextPhone;
@@ -32,8 +34,10 @@ public class FormFragment extends Fragment implements AdapterView.OnItemSelected
     EditText mEditTextQuantity;
     Button mButtonBookTikets;
     Spinner mSpinnerTime;
-    Boolean[] mStates = { true, true, false, false, false, false };
+    Boolean[] mStates = { false, true, false, false, false, false };
     String mStringTimeSelected;
+    Button mButtonDatePicker;
+    TextView mTextViewDate;
 
     public FormFragment() {
         // Required empty public constructor
@@ -45,16 +49,38 @@ public class FormFragment extends Fragment implements AdapterView.OnItemSelected
         View rootView = inflater.inflate(R.layout.fragment_form, container, false);
         getMovieTitle(rootView);
         wireUpViews(rootView);
+        setTextWatchers();
         fillFormFromPreferences();
+        prepareSpinner();
 
-        mSpinnerTime = (Spinner) rootView.findViewById(R.id.spinner);
+        mButtonDatePicker.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(),SelectDateActivity.class);
+                startActivityForResult(intent,REQUEST_CODE);
+            }
+        });
+
+        return rootView;
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == REQUEST_CODE){
+            if (resultCode == Activity.RESULT_OK){
+                mTextViewDate.setText(data.getStringExtra(SelectDateActivity.PlaceholderFragment.MOVIE_DATE));
+                mStates[0]=true;
+            }
+        }
+    }
+
+    private void prepareSpinner() {
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getActivity(),
                 R.array.movies_schedule_array, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         mSpinnerTime.setAdapter(adapter);
         mSpinnerTime.setOnItemSelectedListener(this);
-
-        return rootView;
     }
 
     private void fillFormFromPreferences() {
@@ -65,12 +91,14 @@ public class FormFragment extends Fragment implements AdapterView.OnItemSelected
     }
 
     private void wireUpViews(View rootView) {
+        mTextViewDate = (TextView) rootView.findViewById(R.id.text_view_date_selected); // mStates[0]
         mEditTextQuantity = (EditText) rootView.findViewById(R.id.edit_text_quantity); // mStates[2]
         mEditTextName = (EditText) rootView.findViewById(R.id.edit_text_name); // mStates[3]
         mEditTextPhone = (EditText) rootView.findViewById(R.id.edit_text_phone); // mStates[4]
         mEditTextEmail = (EditText) rootView.findViewById(R.id.edit_text_email); // mStates[5]
         mButtonBookTikets = (Button) rootView.findViewById(R.id.button_book);
-        setTextWatchers();
+        mSpinnerTime = (Spinner) rootView.findViewById(R.id.spinner);
+        mButtonDatePicker = (Button) rootView.findViewById(R.id.button_date_picker);
     }
 
     private void setTextWatchers() {

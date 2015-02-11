@@ -27,5 +27,7 @@
     <string name="pref_phone_title">Default phone number</string>
     <string name="pref_phone_summary">Enter a default phone number</string>
     <string name="title_activity_settings">Settings</string>
+    <string name="title_activity_select_date">Select Date</string>
+    <string name="button_select_done">Done</string>
 
 </resources>
