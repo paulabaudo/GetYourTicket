@@ -1,0 +1,9 @@
+<resources>
+    <string-array name="movies_schedule_array">
+        <item>14:00 hs</item>
+        <item>16:00 hs</item>
+        <item>18:00 hs</item>
+        <item>20:00 hs</item>
+        <item>22:00 hs</item>
+    </string-array>
+</resources>

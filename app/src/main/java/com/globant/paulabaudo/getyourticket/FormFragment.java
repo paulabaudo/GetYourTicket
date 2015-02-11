@@ -11,15 +11,19 @@ import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class FormFragment extends Fragment{
+public class FormFragment extends Fragment implements AdapterView.OnItemSelectedListener {
 
     TextView mTextViewMovie;
     EditText mEditTextName;
@@ -27,7 +31,9 @@ public class FormFragment extends Fragment{
     EditText mEditTextEmail;
     EditText mEditTextQuantity;
     Button mButtonBookTikets;
+    Spinner mSpinnerTime;
     Boolean[] mStates = { true, true, false, false, false, false };
+    String mStringTimeSelected;
 
     public FormFragment() {
         // Required empty public constructor
@@ -40,6 +46,13 @@ public class FormFragment extends Fragment{
         getMovieTitle(rootView);
         wireUpViews(rootView);
         fillFormFromPreferences();
+
+        mSpinnerTime = (Spinner) rootView.findViewById(R.id.spinner);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getActivity(),
+                R.array.movies_schedule_array, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        mSpinnerTime.setAdapter(adapter);
+        mSpinnerTime.setOnItemSelectedListener(this);
 
         return rootView;
     }
@@ -137,4 +150,12 @@ public class FormFragment extends Fragment{
         return (i==mStates.length);
     }
 
+    @Override
+    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+        mStringTimeSelected = parent.getItemAtPosition(position).toString();
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> parent) {
+    }
 }
