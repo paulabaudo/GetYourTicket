@@ -5,9 +5,13 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
+import android.text.Editable;
+import android.text.TextUtils;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -22,7 +26,8 @@ public class FormFragment extends Fragment{
     EditText mEditTextPhone;
     EditText mEditTextEmail;
     EditText mEditTextQuantity;
-    Boolean[] mStates = { false };
+    Button mButtonBookTikets;
+    Boolean[] mStates = { true, true, false, false, false, false };
 
     public FormFragment() {
         // Required empty public constructor
@@ -47,15 +52,89 @@ public class FormFragment extends Fragment{
     }
 
     private void wireUpViews(View rootView) {
-        mEditTextName = (EditText) rootView.findViewById(R.id.edit_text_name);
-        mEditTextPhone = (EditText) rootView.findViewById(R.id.edit_text_phone);
-        mEditTextEmail = (EditText) rootView.findViewById(R.id.edit_text_email);
-        mEditTextQuantity = (EditText) rootView.findViewById(R.id.edit_text_quantity);
+        mEditTextQuantity = (EditText) rootView.findViewById(R.id.edit_text_quantity); // mStates[2]
+        mEditTextName = (EditText) rootView.findViewById(R.id.edit_text_name); // mStates[3]
+        mEditTextPhone = (EditText) rootView.findViewById(R.id.edit_text_phone); // mStates[4]
+        mEditTextEmail = (EditText) rootView.findViewById(R.id.edit_text_email); // mStates[5]
+        mButtonBookTikets = (Button) rootView.findViewById(R.id.button_book);
+        setTextWatchers();
+    }
+
+    private void setTextWatchers() {
+        mEditTextName.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                mStates[3] = (!TextUtils.isEmpty(s.toString()));
+                mButtonBookTikets.setEnabled(formIsComplete());
+            }
+        });
+        mEditTextPhone.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                mStates[4] = (!TextUtils.isEmpty(s.toString()));
+                mButtonBookTikets.setEnabled(formIsComplete());
+            }
+        });
+        mEditTextEmail.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                mStates[5] = (!TextUtils.isEmpty(s.toString()));
+                mButtonBookTikets.setEnabled(formIsComplete());
+            }
+        });
+        mEditTextQuantity.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                mStates[2] = (!TextUtils.isEmpty(s.toString()));
+                mButtonBookTikets.setEnabled(formIsComplete());
+            }
+        });
     }
 
     private void getMovieTitle(View rootView) {
         mTextViewMovie = (TextView) rootView.findViewById(R.id.text_view_movie_name);
         mTextViewMovie.setText(getArguments().getString(Constants.MOVIE));
+    }
+
+    private Boolean formIsComplete(){
+        int i = 0;
+
+        while (i<mStates.length && mStates[i]){
+            i++;
+        }
+        return (i==mStates.length);
     }
 
 }

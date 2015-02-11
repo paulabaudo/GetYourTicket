@@ -196,6 +196,7 @@
         android:id="@+id/button_book"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="@dimen/element_spacer"
-        android:background="@drawable/button_background" />
+        android:background="@drawable/button_background"
+        android:enabled="false"/>
 
 </LinearLayout>
