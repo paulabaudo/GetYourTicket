@@ -1,12 +1,10 @@
 package com.globant.paulabaudo.getyourticket;
 
 
-import android.app.Activity;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,6 +21,8 @@ public class FormFragment extends Fragment{
     EditText mEditTextName;
     EditText mEditTextPhone;
     EditText mEditTextEmail;
+    EditText mEditTextQuantity;
+    Boolean[] mStates = { false };
 
     public FormFragment() {
         // Required empty public constructor
@@ -50,6 +50,7 @@ public class FormFragment extends Fragment{
         mEditTextName = (EditText) rootView.findViewById(R.id.edit_text_name);
         mEditTextPhone = (EditText) rootView.findViewById(R.id.edit_text_phone);
         mEditTextEmail = (EditText) rootView.findViewById(R.id.edit_text_email);
+        mEditTextQuantity = (EditText) rootView.findViewById(R.id.edit_text_quantity);
     }
 
     private void getMovieTitle(View rootView) {

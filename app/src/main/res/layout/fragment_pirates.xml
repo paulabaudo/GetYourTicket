@@ -35,7 +35,8 @@
                 android:text="@string/text_get_your_ticket"
                 android:id="@+id/button_get_tickets_pirates"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="@dimen/element_spacer" />
+                android:layout_marginTop="@dimen/element_spacer"
+                android:background="@drawable/button_background" />
         </LinearLayout>
     </ScrollView>
 
