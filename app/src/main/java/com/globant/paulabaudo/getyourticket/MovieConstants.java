@@ -3,7 +3,7 @@ package com.globant.paulabaudo.getyourticket;
 /**
  * Created by Paula on 04/02/2015.
  */
-public class Constants {
+public class MovieConstants {
 
     // Movies
     public final static String MOVIE = "Movie";

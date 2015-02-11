@@ -7,7 +7,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.TextView;
 
 
 /**
@@ -37,7 +36,7 @@ public class HobbitFragment extends Fragment {
             public void onClick(View v) {
                 FormFragment form = new FormFragment();
                 Bundle arguments = new Bundle();
-                arguments.putString(Constants.MOVIE, Constants.MOVIE_HOBBIT);
+                arguments.putString(MovieConstants.MOVIE, MovieConstants.MOVIE_HOBBIT);
                 form.setArguments(arguments);
                 getFragmentManager().beginTransaction().replace(R.id.container, form).
                         addToBackStack(null).commit();

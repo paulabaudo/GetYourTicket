@@ -30,5 +30,6 @@
     <string name="title_activity_select_date">Select Date</string>
     <string name="button_select_done">Done</string>
     <string name="text_view_success">Your tickets have been successfuly booked!</string>
+    <string name="confirmation_summary">%1$s: You have booked %2$s tickets for %3$s at %4$s to see %5$s.</string>
 
 </resources>

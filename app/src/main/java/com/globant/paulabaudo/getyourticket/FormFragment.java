@@ -52,7 +52,27 @@ public class FormFragment extends Fragment implements AdapterView.OnItemSelected
         setTextWatchers();
         fillFormFromPreferences();
         prepareSpinner();
+        prepareButtonDatePicker();
 
+        mButtonBookTikets.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ConfirmationFragment confirmationFragment = new ConfirmationFragment();
+                Bundle arguments = new Bundle();
+                arguments.putString(ConfirmationFragment.CONFIRMATION_SUMMARY,
+                        String.format(getString(R.string.confirmation_summary, mEditTextName.getText().toString(),
+                                mEditTextQuantity.getText().toString(), mTextViewDate.getText().toString(),
+                                mStringTimeSelected, mTextViewMovie.getText().toString())));
+                confirmationFragment.setArguments(arguments);
+                getFragmentManager().beginTransaction().replace(R.id.container, confirmationFragment).
+                        addToBackStack(null).commit();
+            }
+        });
+
+        return rootView;
+    }
+
+    private void prepareButtonDatePicker() {
         mButtonDatePicker.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -60,8 +80,6 @@ public class FormFragment extends Fragment implements AdapterView.OnItemSelected
                 startActivityForResult(intent,REQUEST_CODE);
             }
         });
-
-        return rootView;
     }
 
     @Override
@@ -166,7 +184,7 @@ public class FormFragment extends Fragment implements AdapterView.OnItemSelected
 
     private void getMovieTitle(View rootView) {
         mTextViewMovie = (TextView) rootView.findViewById(R.id.text_view_movie_name);
-        mTextViewMovie.setText(getArguments().getString(Constants.MOVIE));
+        mTextViewMovie.setText(getArguments().getString(MovieConstants.MOVIE));
     }
 
     private Boolean formIsComplete(){
