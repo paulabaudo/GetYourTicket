@@ -44,5 +44,4 @@ public class PiratesFragment extends Fragment {
         });
     }
 
-
 }

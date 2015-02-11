@@ -26,6 +26,9 @@ import android.widget.TextView;
  */
 public class FormFragment extends Fragment implements AdapterView.OnItemSelectedListener {
 
+    public final static String BUTTON_ENABLED = "button_enabled";
+    public final static String MOVIE_DATE = "movie_date";
+    public final static String DATE_TEXT_STATUS = "date_text_status";
     final static Integer REQUEST_CODE = 0;
     TextView mTextViewMovie;
     EditText mEditTextName;
@@ -53,7 +56,17 @@ public class FormFragment extends Fragment implements AdapterView.OnItemSelected
         fillFormFromPreferences();
         prepareSpinner();
         prepareButtonDatePicker();
+        prepareButtonBookTickets();
+        if (savedInstanceState!=null){
+            mButtonBookTikets.setEnabled(savedInstanceState.getBoolean(BUTTON_ENABLED));
+            mTextViewDate.setText(savedInstanceState.getString(MOVIE_DATE));
+            mStates[0]=savedInstanceState.getBoolean(DATE_TEXT_STATUS);
+        }
 
+        return rootView;
+    }
+
+    private void prepareButtonBookTickets() {
         mButtonBookTikets.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -68,8 +81,6 @@ public class FormFragment extends Fragment implements AdapterView.OnItemSelected
                         addToBackStack(null).commit();
             }
         });
-
-        return rootView;
     }
 
     private void prepareButtonDatePicker() {
@@ -203,5 +214,13 @@ public class FormFragment extends Fragment implements AdapterView.OnItemSelected
 
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putString(MOVIE_DATE,mTextViewDate.getText().toString());
+        outState.putBoolean(BUTTON_ENABLED,mButtonBookTikets.isEnabled());
+        outState.putBoolean(DATE_TEXT_STATUS,mStates[0]);
     }
 }
