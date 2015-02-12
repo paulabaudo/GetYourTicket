@@ -7,7 +7,7 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="text_get_your_ticket">Get Your Ticket!</string>
     <string name="text_choose_movie">Choose a movie from the list below...</string>
-    <string name="text_view_pirates_description_text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which dont look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isnt anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</string>
+    <string name="text_view_pirates_description_text">Blacksmith Will Turner teams up with eccentric pirate "Captain" Jack Sparrow to save his love, the governor\'s daughter, from Jack\'s former pirate allies, who are now undead.</string>
     <string name="text_view_movie_name_text">Movie:</string>
     <string name="text_view_movie_text">Movie:</string>
     <string name="text_view_date_text">Date:</string>
@@ -31,5 +31,14 @@
     <string name="button_select_done">Done</string>
     <string name="text_view_success">Your tickets have been successfuly booked!</string>
     <string name="confirmation_summary">%1$s: You have booked %2$s tickets for %3$s at %4$s to see %5$s.</string>
+    <string name="text_view_transformers_description_text">Sam Witwicky leaves the Autobots behind for a normal life. But when his mind is filled with cryptic symbols, the Decepticons target him and he is dragged back into the Transformers\' war.</string>
+    <string name="text_view_thor_description_text">The powerful but arrogant god Thor is cast out of Asgard to live amongst humans in Midgard (Earth), where he soon becomes one of their finest defenders.</string>
+    <string name="text_view_prince_description_text">A young fugitive prince and princess must stop a villain who unknowingly threatens to destroy the world with a special dagger that enables the magic sand inside to reverse time.</string>
+    <string name="text_view_iron_description_text">With the world now aware of his identity as Iron Man, Tony Stark must contend with both his declining health and a vengeful mad man with ties to his father\'s legacy.</string>
+    <string name="text_view_inception_description_text">A thief who steals corporate secrets through use of dream-sharing technology is given the inverse task of planting an idea into the mind of a CEO.</string>
+    <string name="text_view_hobbit_description_text">A reluctant hobbit, Bilbo Baggins, sets out to the Lonely Mountain with a spirited group of dwarves to reclaim their mountain home - and the gold within it - from the dragon Smaug.</string>
+    <string name="text_view_eragon_description_text">In his homeland of Alagaesia, a farm boy happens upon a dragon\'s egg -- a discovery that leads him on a predestined journey where he realized he\'s the one person who can defend his home against an evil king.</string>
+    <string name="text_view_avengers_description_text">Earth\'s mightiest heroes must come together and learn to fight as a team if they are to stop the mischievous Loki and his alien army from enslaving humanity.</string>
+    <string name="text_view_avatar_description_text">A Paraplegic Marine dispatched to the moon Pandora on a unique mission becomes torn between following his orders and protecting the world he feels is his home.</string>
 
 </resources>
