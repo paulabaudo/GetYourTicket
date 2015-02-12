@@ -11,6 +11,7 @@ import android.support.v4.app.FragmentManager;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
+import android.util.Patterns;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,6 +21,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
+
+import java.util.regex.Pattern;
 
 
 /**
@@ -176,7 +179,8 @@ public class FormFragment extends Fragment implements AdapterView.OnItemSelected
 
             @Override
             public void afterTextChanged(Editable s) {
-                mStates[4] = (!TextUtils.isEmpty(s.toString()));
+                final Pattern emailPattern = Patterns.EMAIL_ADDRESS;
+                mStates[4] = ((!TextUtils.isEmpty(s.toString())) && emailPattern.matcher(s).matches());
                 checkButtonStatus();
             }
         });

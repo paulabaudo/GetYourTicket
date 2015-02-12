@@ -11,12 +11,12 @@
     <string name="text_view_movie_name_text">Movie:</string>
     <string name="text_view_movie_text">Movie:</string>
     <string name="text_view_date_text">Date:</string>
-    <string name="button_date_picker">...</string>
-    <string name="date_picker_example">MM/DD/YYYY</string>
+    <string name="button_date_picker" translatable="false">...</string>
+    <string name="date_picker_example" translatable="false">MM/DD/YYYY</string>
     <string name="text_view_time_text">Time:</string>
     <string name="text_view_name_text">Name:</string>
     <string name="edit_text_phone_text">Phone:</string>
-    <string name="text_view_email_text">E-mail:</string>
+    <string name="text_view_email_text" translatable="false">E-mail:</string>
     <string name="text_view_count_text">Quantity:</string>
     <string name="button_book_text">Book the tickets!</string>
     <string name="pref_default_values">Default values</string>
@@ -40,5 +40,6 @@
     <string name="text_view_eragon_description_text">In his homeland of Alagaesia, a farm boy happens upon a dragon\'s egg -- a discovery that leads him on a predestined journey where he realized he\'s the one person who can defend his home against an evil king.</string>
     <string name="text_view_avengers_description_text">Earth\'s mightiest heroes must come together and learn to fight as a team if they are to stop the mischievous Loki and his alien army from enslaving humanity.</string>
     <string name="text_view_avatar_description_text">A Paraplegic Marine dispatched to the moon Pandora on a unique mission becomes torn between following his orders and protecting the world he feels is his home.</string>
+    <string name="es">Spanish</string>
 
 </resources>

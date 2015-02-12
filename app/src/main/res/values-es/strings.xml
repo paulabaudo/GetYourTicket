@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Get Your Ticket</string>
+    <string name="action_settings">Preferencias</string>
+    <string name="button_book_text">Reservar</string>
+    <string name="button_select_done">Aceptar</string>
+    <string name="confirmation_summary">%1$s: Has reservado %2$s entradas para el %3$s a las %4$s para ver %5$s.</string>
+    <string name="edit_text_phone_text">Teléfono:</string>
+    <string name="pref_default_values">Valores por defecto</string>
+    <string name="pref_email_summary">Ingresa e-mail por defecto</string>
+    <string name="pref_email_title">Email predeterminado</string>
+    <string name="pref_phone_summary">Ingresa teléfono por defecto</string>
+    <string name="pref_phone_title">Teléfono predeterminado</string>
+    <string name="pref_username_summary">Ingresa un nombre por defecto</string>
+    <string name="pref_username_title">Nombre predeterminado</string>
+    <string name="text_choose_movie">Elige una película de la lista...</string>
+    <string name="text_get_your_ticket">Reserva tu entrada</string>
+    <string name="text_view_count_text">Cantidad:</string>
+    <string name="text_view_date_text">Fecha:</string>
+    <string name="text_view_movie_name_text">Película</string>
+    <string name="text_view_movie_text">Película:</string>
+    <string name="text_view_name_text">Nombre:</string>
+    <string name="text_view_time_text">Horario:</string>
+    <string name="title_activity_select_date">Elige fecha:</string>
+    <string name="title_activity_settings">Preferencias</string>
+    <string name="es">Español</string>
+    <string name="text_view_success">Tus entradas se han reservado con éxito</string>
+</resources>
