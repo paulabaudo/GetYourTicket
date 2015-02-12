@@ -36,10 +36,10 @@ public class PiratesFragment extends Fragment {
             public void onClick(View v) {
                 FormFragment form = new FormFragment();
                 Bundle arguments = new Bundle();
-                arguments.putString(MovieConstants.MOVIE, MovieConstants.MOVIE_PIRATES);
+                arguments.putString(Constants.MOVIE, Constants.MOVIE_PIRATES);
                 form.setArguments(arguments);
                 getFragmentManager().beginTransaction().replace(R.id.container, form).
-                        addToBackStack(null).commit();
+                        addToBackStack(Constants.FORM_FRAGMENT).commit();
             }
         });
     }

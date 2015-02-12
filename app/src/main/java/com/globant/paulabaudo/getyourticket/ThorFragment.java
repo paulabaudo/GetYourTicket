@@ -36,7 +36,7 @@ public class ThorFragment extends Fragment {
             public void onClick(View v) {
                 FormFragment form = new FormFragment();
                 Bundle arguments = new Bundle();
-                arguments.putString(MovieConstants.MOVIE, MovieConstants.MOVIE_TRANSFORMERS);
+                arguments.putString(Constants.MOVIE, Constants.MOVIE_TRANSFORMERS);
                 form.setArguments(arguments);
                 getFragmentManager().beginTransaction().replace(R.id.container, form).
                         addToBackStack(null).commit();

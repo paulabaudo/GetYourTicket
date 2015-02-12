@@ -7,6 +7,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
@@ -77,6 +78,8 @@ public class FormFragment extends Fragment implements AdapterView.OnItemSelected
                                 mEditTextQuantity.getText().toString(), mTextViewDate.getText().toString(),
                                 mStringTimeSelected, mTextViewMovie.getText().toString())));
                 confirmationFragment.setArguments(arguments);
+                getFragmentManager().popBackStack(Constants.FORM_FRAGMENT, FragmentManager.POP_BACK_STACK_INCLUSIVE);
+                getFragmentManager().popBackStack(Constants.MOVIE_FRAGMENT, FragmentManager.POP_BACK_STACK_INCLUSIVE);
                 getFragmentManager().beginTransaction().replace(R.id.container, confirmationFragment).
                         addToBackStack(null).commit();
             }
@@ -195,7 +198,7 @@ public class FormFragment extends Fragment implements AdapterView.OnItemSelected
 
     private void getMovieTitle(View rootView) {
         mTextViewMovie = (TextView) rootView.findViewById(R.id.text_view_movie_name);
-        mTextViewMovie.setText(getArguments().getString(MovieConstants.MOVIE));
+        mTextViewMovie.setText(getArguments().getString(Constants.MOVIE));
     }
 
     private Boolean formIsComplete(){

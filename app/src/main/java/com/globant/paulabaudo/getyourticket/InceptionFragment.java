@@ -36,7 +36,7 @@ public class InceptionFragment extends Fragment {
             public void onClick(View v) {
                 FormFragment form = new FormFragment();
                 Bundle arguments = new Bundle();
-                arguments.putString(MovieConstants.MOVIE, MovieConstants.MOVIE_INCEPTION);
+                arguments.putString(Constants.MOVIE, Constants.MOVIE_INCEPTION);
                 form.setArguments(arguments);
                 getFragmentManager().beginTransaction().replace(R.id.container, form).
                         addToBackStack(null).commit();

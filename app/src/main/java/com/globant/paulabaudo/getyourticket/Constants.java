@@ -3,7 +3,7 @@ package com.globant.paulabaudo.getyourticket;
 /**
  * Created by Paula on 04/02/2015.
  */
-public class MovieConstants {
+public class Constants {
 
     // Movies
     public final static String MOVIE = "Movie";
@@ -17,5 +17,9 @@ public class MovieConstants {
     public final static String MOVIE_INCEPTION = "Inception";
     public final static String MOVIE_PRINCE = "Prince of Persia";
     public final static String MOVIE_AVATAR = "Avatar";
+
+    // Fragments
+    public final static String MOVIE_FRAGMENT = "movie_fragment";
+    public final static String FORM_FRAGMENT = "form_fragment";
 
 }

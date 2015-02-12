@@ -36,7 +36,7 @@ public class IronFragment extends Fragment {
             public void onClick(View v) {
                 FormFragment form = new FormFragment();
                 Bundle arguments = new Bundle();
-                arguments.putString(MovieConstants.MOVIE, MovieConstants.MOVIE_IRON);
+                arguments.putString(Constants.MOVIE, Constants.MOVIE_IRON);
                 form.setArguments(arguments);
                 getFragmentManager().beginTransaction().replace(R.id.container, form).
                         addToBackStack(null).commit();

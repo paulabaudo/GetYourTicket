@@ -35,7 +35,7 @@ public class EragonFragment extends Fragment {
             public void onClick(View v) {
                 FormFragment form = new FormFragment();
                 Bundle arguments = new Bundle();
-                arguments.putString(MovieConstants.MOVIE, MovieConstants.MOVIE_ERAGON);
+                arguments.putString(Constants.MOVIE, Constants.MOVIE_ERAGON);
                 form.setArguments(arguments);
                 getFragmentManager().beginTransaction().replace(R.id.container, form).
                         addToBackStack(null).commit();

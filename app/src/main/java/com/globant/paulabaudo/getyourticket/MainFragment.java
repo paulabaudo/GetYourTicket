@@ -17,16 +17,16 @@ import android.widget.ListView;
 public class MainFragment extends Fragment {
 
     ListView mListViewMovies;
-    final String[] mMovies = new String[] { MovieConstants.MOVIE_PIRATES,
-            MovieConstants.MOVIE_HOBBIT  ,
-            MovieConstants.MOVIE_ERAGON,
-            MovieConstants.MOVIE_AVENGERS,
-            MovieConstants.MOVIE_THOR,
-            MovieConstants.MOVIE_IRON,
-            MovieConstants.MOVIE_TRANSFORMERS,
-            MovieConstants.MOVIE_INCEPTION,
-            MovieConstants.MOVIE_PRINCE,
-            MovieConstants.MOVIE_AVATAR
+    final String[] mMovies = new String[] { Constants.MOVIE_PIRATES,
+            Constants.MOVIE_HOBBIT  ,
+            Constants.MOVIE_ERAGON,
+            Constants.MOVIE_AVENGERS,
+            Constants.MOVIE_THOR,
+            Constants.MOVIE_IRON,
+            Constants.MOVIE_TRANSFORMERS,
+            Constants.MOVIE_INCEPTION,
+            Constants.MOVIE_PRINCE,
+            Constants.MOVIE_AVATAR
     };
 
     public MainFragment() {
@@ -52,43 +52,43 @@ public class MainFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 switch (mMovies[position]){
-                    case MovieConstants.MOVIE_PIRATES:
+                    case Constants.MOVIE_PIRATES:
                         getFragmentManager().beginTransaction().replace(R.id.container, new PiratesFragment()).
-                                addToBackStack(null).commit();
+                                addToBackStack(Constants.MOVIE_FRAGMENT).commit();
                         break;
-                    case MovieConstants.MOVIE_HOBBIT:
+                    case Constants.MOVIE_HOBBIT:
                         getFragmentManager().beginTransaction().replace(R.id.container, new HobbitFragment()).
                                 addToBackStack(null).commit();
                         break;
-                    case MovieConstants.MOVIE_AVATAR:
+                    case Constants.MOVIE_AVATAR:
                         getFragmentManager().beginTransaction().replace(R.id.container, new AvatarFragment()).
                                 addToBackStack(null).commit();
                         break;
-                    case MovieConstants.MOVIE_AVENGERS:
+                    case Constants.MOVIE_AVENGERS:
                         getFragmentManager().beginTransaction().replace(R.id.container, new AvengersFragment()).
                                 addToBackStack(null).commit();
                         break;
-                    case MovieConstants.MOVIE_ERAGON:
+                    case Constants.MOVIE_ERAGON:
                         getFragmentManager().beginTransaction().replace(R.id.container, new EragonFragment()).
                                 addToBackStack(null).commit();
                         break;
-                    case MovieConstants.MOVIE_INCEPTION:
+                    case Constants.MOVIE_INCEPTION:
                         getFragmentManager().beginTransaction().replace(R.id.container, new InceptionFragment()).
                                 addToBackStack(null).commit();
                         break;
-                    case MovieConstants.MOVIE_IRON:
+                    case Constants.MOVIE_IRON:
                         getFragmentManager().beginTransaction().replace(R.id.container, new IronFragment()).
                                 addToBackStack(null).commit();
                         break;
-                    case MovieConstants.MOVIE_PRINCE:
+                    case Constants.MOVIE_PRINCE:
                         getFragmentManager().beginTransaction().replace(R.id.container, new PrinceFragment()).
                                 addToBackStack(null).commit();
                         break;
-                    case MovieConstants.MOVIE_THOR:
+                    case Constants.MOVIE_THOR:
                         getFragmentManager().beginTransaction().replace(R.id.container, new ThorFragment()).
                                 addToBackStack(null).commit();
                         break;
-                    case MovieConstants.MOVIE_TRANSFORMERS:
+                    case Constants.MOVIE_TRANSFORMERS:
                         getFragmentManager().beginTransaction().replace(R.id.container, new TransformersFragment()).
                                 addToBackStack(null).commit();
                         break;
