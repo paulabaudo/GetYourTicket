@@ -19,7 +19,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/image_view_iron"
                 android:layout_gravity="center_horizontal"
-                android:src="@drawable/pirates" />
+                android:src="@drawable/iron" />
 
             <TextView
                 android:layout_width="wrap_content"
