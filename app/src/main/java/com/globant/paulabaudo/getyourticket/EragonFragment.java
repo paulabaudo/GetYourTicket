@@ -38,7 +38,7 @@ public class EragonFragment extends Fragment {
                 arguments.putString(Constants.MOVIE, Constants.MOVIE_ERAGON);
                 form.setArguments(arguments);
                 getFragmentManager().beginTransaction().replace(R.id.container, form).
-                        addToBackStack(null).commit();
+                        addToBackStack(Constants.FORM_FRAGMENT).commit();
             }
         });
     }

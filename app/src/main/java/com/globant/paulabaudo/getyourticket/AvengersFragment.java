@@ -39,7 +39,7 @@ public class AvengersFragment extends Fragment {
                 arguments.putString(Constants.MOVIE, Constants.MOVIE_AVENGERS);
                 form.setArguments(arguments);
                 getFragmentManager().beginTransaction().replace(R.id.container, form).
-                        addToBackStack(null).commit();
+                        addToBackStack(Constants.FORM_FRAGMENT).commit();
             }
         });
     }

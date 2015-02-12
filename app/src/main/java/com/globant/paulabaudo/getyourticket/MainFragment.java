@@ -58,39 +58,39 @@ public class MainFragment extends Fragment {
                         break;
                     case Constants.MOVIE_HOBBIT:
                         getFragmentManager().beginTransaction().replace(R.id.container, new HobbitFragment()).
-                                addToBackStack(null).commit();
+                                addToBackStack(Constants.MOVIE_FRAGMENT).commit();
                         break;
                     case Constants.MOVIE_AVATAR:
                         getFragmentManager().beginTransaction().replace(R.id.container, new AvatarFragment()).
-                                addToBackStack(null).commit();
+                                addToBackStack(Constants.MOVIE_FRAGMENT).commit();
                         break;
                     case Constants.MOVIE_AVENGERS:
                         getFragmentManager().beginTransaction().replace(R.id.container, new AvengersFragment()).
-                                addToBackStack(null).commit();
+                                addToBackStack(Constants.MOVIE_FRAGMENT).commit();
                         break;
                     case Constants.MOVIE_ERAGON:
                         getFragmentManager().beginTransaction().replace(R.id.container, new EragonFragment()).
-                                addToBackStack(null).commit();
+                                addToBackStack(Constants.MOVIE_FRAGMENT).commit();
                         break;
                     case Constants.MOVIE_INCEPTION:
                         getFragmentManager().beginTransaction().replace(R.id.container, new InceptionFragment()).
-                                addToBackStack(null).commit();
+                                addToBackStack(Constants.MOVIE_FRAGMENT).commit();
                         break;
                     case Constants.MOVIE_IRON:
                         getFragmentManager().beginTransaction().replace(R.id.container, new IronFragment()).
-                                addToBackStack(null).commit();
+                                addToBackStack(Constants.MOVIE_FRAGMENT).commit();
                         break;
                     case Constants.MOVIE_PRINCE:
                         getFragmentManager().beginTransaction().replace(R.id.container, new PrinceFragment()).
-                                addToBackStack(null).commit();
+                                addToBackStack(Constants.MOVIE_FRAGMENT).commit();
                         break;
                     case Constants.MOVIE_THOR:
                         getFragmentManager().beginTransaction().replace(R.id.container, new ThorFragment()).
-                                addToBackStack(null).commit();
+                                addToBackStack(Constants.MOVIE_FRAGMENT).commit();
                         break;
                     case Constants.MOVIE_TRANSFORMERS:
                         getFragmentManager().beginTransaction().replace(R.id.container, new TransformersFragment()).
-                                addToBackStack(null).commit();
+                                addToBackStack(Constants.MOVIE_FRAGMENT).commit();
                         break;
                 }
             }
